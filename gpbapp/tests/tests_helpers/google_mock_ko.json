@@ -1,0 +1,5 @@
+{
+    "candidates": [],
+    "error_message": "API keys with referer restrictions cannot be used with this API.",
+    "status": "REQUEST_DENIED"
+}

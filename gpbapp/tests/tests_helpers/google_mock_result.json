@@ -1,0 +1,26 @@
+{
+    "candidates": [
+        {
+            "formatted_address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
+            "geometry": {
+                "location": {
+                    "lat": 48.85837009999999,
+                    "lng": 2.2944813
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.85974697989273,
+                        "lng": 2.29610765
+                    },
+                    "southwest": {
+                        "lat": 48.85704732010728,
+                        "lng": 2.29251745
+                    }
+                }
+            },
+            "name": "Tour Eiffel",
+            "place_id": "ChIJLU7jZClu5kcR4PcOOO6p3I0"
+        }
+    ],
+    "status": "OK"
+}

@@ -1,0 +1,23 @@
+{
+  "presentation":
+  ["Salut, salut! Alors, quel lieu t'intéresse aujourd'hui? Demande moi et je te dirais où cela se trouve et si j'ai une anecdote sur le sujet, je me ferais un plaisir de la partager!",
+  "Bonjour mon ami! J'ai plaisir à croire que je peux beaucoup t'apprendre. Je suis incollable sur l'histoire des lieux, un don je pense... Teste moi si tu es curieux"],
+  "geo_answers":
+  ["Mais oui bein sûr, je connais cette adresse! La voici : ",
+    "Ah oui! Ce lieu me dit quelque chose, voilà où cela se trouve : ",
+    "Je me souviens très bien de cet endroit. Voici son adresse : ",
+    "J'étais encore jeune quand j'ai découvert cet endroit qui se trouve : "],
+  "wiki_answers":
+  ["J'ai un tas d'informations sur ce lieu !",
+    "Et tu veux savoir une curiosité à propos de cette adresse ? ",
+    "Approche-toi, j'ai une histoire concernant ce lieu... ",
+    "Et si tu veux savoir une anecdote par rapport a ton adresse... "],
+  "geo_noresults_answer":
+   ["Pourrais-tu répéter ta question stp? Tu sais, je suis vieux...",
+     "Cela ne me dit rien... Peut être que si tu reformules ta question je la comprendrais mieux.",
+     "Ah, tu me poses une colle là... Répète un peu pour voir?",
+     "Mais t'ai-je déjà raconté l'histoire de ce quartier qui m'a vu en culottes courtes ?"],
+  "wiki_noresults_answer":
+   ["C'est incroyable, je ne connais aucun endroit dans les alentours... tu m'en vois désolé, j'adore raconter des histoires",
+   "Zut alors, je n'ai rien à te raconter à ce sujet! Un autre lieu me rendrait certainement plus bavard. N'hésite pas à solliciter ton GrandPy!"]
+}
