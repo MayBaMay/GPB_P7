@@ -1,0 +1,44 @@
+{
+    "batchcomplete": "",
+    "query": {
+        "search": [
+            {
+                "ns": 0,
+                "title": "Tour Eiffel",
+                "pageid": 1359783,
+                "size": 128640,
+                "wordcount": 14394,
+                "snippet": "Pour les articles homonymes, voir <span class=\"searchmatch\">Tour</span> <span class=\"searchmatch\">Eiffel</span> (homonymie). <span class=\"searchmatch\">Tour</span> <span class=\"searchmatch\">Eiffel</span> Le Champ-de-Mars au premier plan, la <span class=\"searchmatch\">tour</span> <span class=\"searchmatch\">Eiffel</span> au deuxi\u00e8me, puis les jardins du",
+                "timestamp": "2019-12-01T20:46:46Z"
+            },
+             {
+                 "ns": 0,
+                 "title": "Gustave Eiffel",
+                 "pageid": 12801,
+                 "size": 48654,
+                 "wordcount": 5686,
+                 "snippet": "Gustave et <span class=\"searchmatch\">Eiffel</span>. Gustave <span class=\"searchmatch\">Eiffel</span> Portrait de Gustave <span class=\"searchmatch\">Eiffel</span> selon l'Illustration en 1893. Signature Gustave <span class=\"searchmatch\">Eiffel</span>, n\u00e9 Bonickhausen dit <span class=\"searchmatch\">Eiffel</span> le 15 d\u00e9cembre",
+                 "timestamp": "2019-12-14T17:08:02Z"
+             }
+          ],
+          "geosearch": [
+                {
+                    "pageid": 1359783,
+                    "ns": 0,
+                    "title": "Tour Eiffel",
+                    "lat": 48.858296,
+                    "lon": 2.294479,
+                    "dist": 8.2,
+                    "primary": ""
+                }
+            ],
+          "pages": {
+                    "1359783": {
+                        "pageid": 1359783,
+                        "ns": 0,
+                        "title": "Tour Eiffel",
+                        "extract": "La tour Eiffel  est une tour de fer puddl\u00e9 de 324 m\u00e8tres de hauteur (avec antennes) situ\u00e9e \u00e0 Paris, \u00e0 l\u2019extr\u00e9mit\u00e9 nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. Son adresse officielle est 5, avenue Anatole-France."
+                        }
+                  }
+    }
+}
