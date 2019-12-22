@@ -18,7 +18,7 @@ class AppTest(LiveServerTestCase):
 
     def create_app(self):
         """Create the app with tests configuration"""
-        app.config.from_object('app.tests.config')
+        app.config.from_object('gpbapp.tests.config')
         return app
 
     def setUp(self):

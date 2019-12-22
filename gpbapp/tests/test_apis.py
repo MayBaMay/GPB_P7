@@ -30,7 +30,7 @@ class TestGoogle:
 
         def mock_get(*args, **kwargs):
             """Get the mock from MockResponse class"""
-            return MockResponse("app/tests/tests_helpers/google_mock_result.json")
+            return MockResponse("gpbapp/tests/tests_helpers/google_mock_result.json")
 
         # apply the monkeypatch for requests.get to mock_get
         monkeypatch.setattr(requests, "get", mock_get)
@@ -46,7 +46,7 @@ class TestGoogle:
 
         def mock_get(*args, **kwargs):
             """Get the mock from MockResponse class"""
-            return MockResponse("app/tests/tests_helpers/google_mock_ko.json")
+            return MockResponse("gpbapp/tests/tests_helpers/google_mock_ko.json")
 
         monkeypatch.setattr(requests, "get", mock_get)
 
@@ -75,7 +75,7 @@ class TestWikimedia:
 
         def mock_get(*args, **kwargs):
             """Get the mock from MockResponse class"""
-            return MockResponse("app/tests/tests_helpers/wiki_mock_result.json")
+            return MockResponse("gpbapp/tests/tests_helpers/wiki_mock_result.json")
 
         monkeypatch.setattr(requests, "get", mock_get)
 
@@ -95,7 +95,7 @@ class TestWikimedia:
 
         def mock_get(*args, **kwargs):
             """Get the mock from MockResponse class"""
-            return MockResponse("app/tests/tests_helpers/wiki_mock_ko.json")
+            return MockResponse("gpbapp/tests/tests_helpers/wiki_mock_ko.json")
 
         monkeypatch.setattr(requests, "get", mock_get)
 
