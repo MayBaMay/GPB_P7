@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """This module contains tests on links between server app and the server"""
 
 from flask_testing import LiveServerTestCase

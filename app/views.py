@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """This module contains the view functions responding to requests to the application."""
 
 from flask import Flask, render_template, request, jsonify

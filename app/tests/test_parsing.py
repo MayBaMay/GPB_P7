@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """This module tests methods of the parsing class"""
 
 from ..utils.parser import Parser

@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """This module contains tests of GooglesAPI's and MediaWiki API's results"""
 
 import json

@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """Initialize the app with Flask"""
 
 from flask import Flask
