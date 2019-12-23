@@ -104,7 +104,12 @@ function reset(){
   // reset form after submission and get value in let
   $("form").trigger("reset");
   // scroll up to the top of the section
-  $('section').animate({scrollTop: $("#all_dialogue").offset().top}, 'slow');
+  let section = $("section");
+  let top = section.scrollTop() // Get position of the body
+  if(top!=0)
+  {
+  section.animate({scrollTop:0}, '500');
+  }
   // hide loader icone
   loader.hide();
 }
