@@ -7,7 +7,6 @@ from flask import Flask
 from config import *
 
 app = Flask(__name__)
-app.config.from_object('Config')
-app.config.from_envvar('GOOGLE_GEO_KEY')
+app.config.from_object('config')
 
 from gpbapp import views

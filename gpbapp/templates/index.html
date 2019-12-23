@@ -24,7 +24,7 @@
             <div class="col-2" id="img_papybot">
               <img class="rounded-circle" src="{{ url_for('static', filename='img/papybot.png') }}" alt="papybot"/>
             </div>
-            <div class="col-10 align-self-center text-center" id="title_page">
+            <div class="col-8 col-xs-10 align-self-center text-center" id="title_page">
                 <h1>GrandPy Bot</h1>
                 <h2>Tu veux une anecdote?</h2>
             </div>
@@ -37,8 +37,6 @@
           </div>
         </div>
       </header>
-
-      <div id="content">
 
       <section>
         <div class="container" id="all_dialogue">
@@ -54,21 +52,19 @@
       <footer class="footer">
         <div class="container text-center">
           <div class="row">
-            <div id="footerText" class="col-10">
-              <p>GrandPy Bot - Projet 7 Cursur Python Openclassrooms</p>
+            <div class="col-2 col-xs-0"></div>
+            <div id="footerText" class="col-8 col-xs-10">
+              <p>Projet 7 Cursur Python Openclassrooms</p>
               <p>Maylis Baschet / Novembre 2019</p>
             </div>
-            <div id="footerLogos" class="col-2 align-self-center">
-              <a href="https://github.com/MayBaMay/GPB_P7"
+            <div id="footerLogos" class="col-xs-2 align-self-center">
+              <a href="https://github.com/MayBaMay/GPB-P7"
                   target=" _blank" title="lien vers repo GitGub">
                   <img src="{{ url_for('static', filename='img/GitHub-Mark-64px.png') }}" alt="logo github"  />
               </a>
             </div>
-          </div>
         </div>
       </footer>
-
-      </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

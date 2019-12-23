@@ -15,7 +15,6 @@ from .utils.wiki_api import WikimediaApi
 def index():
     """Render template index with sentence grandPyBot and googlemap's key"""
     grandpy = GrandPy()
-    print(app.config)
     return render_template('index.html',
                            presentation=grandpy.presentation,
                            gmap_api_key=app.config['GOOGLE_JS_KEY'])

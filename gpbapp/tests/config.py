@@ -6,7 +6,7 @@
 import os
 
 SECRET_KEY_TEST = os.environ.get('SECRET_KEY') or '@#qsf!?d/qd&:&039@#:,8'
-GOOGLE_KEY_TEST = os.environ.get("GOOGLE_GEO_KEY")
+GOOGLE_KEY_TEST = os.environ.get("GOOGLE_API_TEST_KEY") or'AIzaSyD5Z9lKhzF6QCYeB5-tTm4AcIl4FCQBy8E'
 
 
 URL = "http://localhost:8943/"
