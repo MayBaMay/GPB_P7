@@ -44,6 +44,8 @@ $(document).ready(function onSubmit(){
     //get response from server
     .done(function(data) {
 
+      conole.log(data.secretkey)
+
       // Create response block and insert reponse in the block
       let respRow = $('<div class="block_response row text-center">');
       let respCol = $('<div class="col-xs-12 offset-md-5 col-md-7 alert alert-success">');
