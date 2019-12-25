@@ -32,7 +32,6 @@ $(document).ready(function onSubmit(){
     questCol.appendTo(questRow);
     questP.appendTo(questCol);
     questP.text('Moi : ' + $('#query').val());
-    console.log ($('#query').val());
 
     // send user_input to server
     $.ajax({
@@ -100,15 +99,16 @@ function initMap(lat, lng, id) {
 }
 
 function reset(){
-  // reset form after submission and get value in let
+  // reset form after submission
   $("form").trigger("reset");
+  $('textarea').blur();
   // scroll up to the top of the section
   let section = $("section");
   let top = section.scrollTop() // Get position
-  if(top!=0)
-  {
+  if(top!=0){
   section.animate({scrollTop:0}, '500');
   }
+  // remove focus from form
   // hide loader icone
   loader.hide();
 }

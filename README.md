@@ -1,1 +1,2 @@
-# GPB_P7
+# GrandPy Bot
+## Project realised in the  
