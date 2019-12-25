@@ -102,7 +102,9 @@ function reset(){
   // reset form after submission
   $("form").trigger("reset");
   // remove focus from form
-  blurAll();  // don't work on iphone...
+  // $('textarea').blur();  // don't work on iphone...
+  blurAll();
+  // $(':focus').blur();
   // scroll up to the top of the section
   let section = $("section");
   let top = section.scrollTop() // Get position
