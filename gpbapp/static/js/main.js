@@ -101,14 +101,14 @@ function initMap(lat, lng, id) {
 function reset(){
   // reset form after submission
   $("form").trigger("reset");
-  $('textarea').blur();
+  // remove focus from form
+  // $('textarea').blur();  // don't work on iphone...
   // scroll up to the top of the section
   let section = $("section");
   let top = section.scrollTop() // Get position
   if(top!=0){
   section.animate({scrollTop:0}, '500');
   }
-  // remove focus from form
   // hide loader icone
   loader.hide();
 }
