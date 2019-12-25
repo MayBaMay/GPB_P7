@@ -6,7 +6,7 @@
 * and a story about the place
   The application is using Media Wiki API
 
-The project is available online on https://gpbotp7.herokuapp.com/
+The project is available online on https://gpbotp7.herokuapp.com/<br/>;
 NB: Google API might be desactivated in the future.
 
 ## Programm on GitHub :
