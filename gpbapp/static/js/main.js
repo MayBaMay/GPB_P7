@@ -81,7 +81,6 @@ $(document).ready(function onSubmit(){
     // prevent to submit the data twice
     event.preventDefault();
     });
-
   });
 
 // https://developers.google.com/maps/documentation/javascript/markers
@@ -105,7 +104,7 @@ function reset(){
   $("form").trigger("reset");
   // scroll up to the top of the section
   let section = $("section");
-  let top = section.scrollTop() // Get position of the body
+  let top = section.scrollTop() // Get position
   if(top!=0)
   {
   section.animate({scrollTop:0}, '500');
