@@ -102,7 +102,7 @@ function reset(){
   // reset form after submission
   $("form").trigger("reset");
   // remove focus from form
-  // $('textarea').blur();  // don't work on iphone...
+  blurAll();  // don't work on iphone...
   // scroll up to the top of the section
   let section = $("section");
   let top = section.scrollTop() // Get position
@@ -111,4 +111,11 @@ function reset(){
   }
   // hide loader icone
   loader.hide();
+}
+
+function blurAll(){
+ let tmp = document.createElement("input");
+ document.body.appendChild(tmp);
+ tmp.focus();
+ document.body.removeChild(tmp);
 }
