@@ -4,7 +4,7 @@
 import os
 from dotenv import load_dotenv
 
-#### get GOOGLE_GEO_KEY depending if running in localhost or heroku
+#### get GOOGLE_GEO_KEYS depending if running in localhost or heroku
 try:    # try to load local variables from file .env
     load_dotenv()
     DEBUG = True
