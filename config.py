@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import os
-from dotenv import load_dotenv
+
 
 #### get GOOGLE_GEO_KEY depending if running in localhost or heroku
 try:
+    from dotenv import load_dotenv
     load_dotenv()
     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
     DEBUG = True
