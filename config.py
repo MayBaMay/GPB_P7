@@ -12,7 +12,6 @@ try:
     DEBUG = True
 except:
     GOOGLE_GEO_KEY = os.environ.get("GOOGLE_GEO_K")
-    print("clé ", os.getenv("GOOGLE_GEO_K"))
     DEBUG = False
 
 
