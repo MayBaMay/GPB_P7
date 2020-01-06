@@ -11,8 +11,10 @@ try:
     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
     DEBUG = True
 except:
-    GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
+    GOOGLE_GEO_KEY = os.environ.get("GOOGLE_GEO_K")
     DEBUG = False
+
+
 
 # GOOGLE_GEO_KEY = os.popen('heroku config:get GOOGLE_GEO_K').readlines()
 # GOOGLE_GEO_KEY = GOOGLE_GEO_KEY[0][1:40]
