@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 GOOGLE_GEO_K = "AIzaSyD5Z9lKhzF6QCYeB5-tTm4AcIl4FCQBy8E"
 
