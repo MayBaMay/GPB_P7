@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*-
 
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 #### get GOOGLE_GEO_KEY depending if running in localhost or heroku
-try:
-    load_dotenv()
-    GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
-    print(GOOGLE_GEO_KEY + "local")
-except:
+# try:
+#     load_dotenv()
+#     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
+# except:
+#     pass
     # GOOGLE_GEO_KEY = os.environ.get('GOOGLE_GEO_K')
     # print(GOOGLE_GEO_KEY)
-    GOOGLE_GEO_KEY = os.popen('heroku config:get GOOGLE_GEO_K').readlines()
-    GOOGLE_GEO_KEY = GOOGLE_GEO_KEY[0][1:40]
+# GOOGLE_GEO_KEY = os.popen('heroku config:get GOOGLE_GEO_K').readlines()
+# GOOGLE_GEO_KEY = GOOGLE_GEO_KEY[0][1:40]
 
 # if running with heroku, 'IS_HEROKU' would be True
 # is_prod = os.environ.get('IS_HEROKU', None)
@@ -24,6 +24,12 @@ except:
 #     from dotenv import load_dotenv
 #     load_dotenv()
 #     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
+
+APP_ROOT = os.path.join(os.path.dirname(__file__), '.')   # refers to application_top
+dotenv_path = os.path.join(APP_ROOT, '.env')
+load_dotenv(dotenv_path)
+
+GOOGLE_GEO_KEY = os.getenv('GOOGLE_GEO_K')
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or '@#qsf!?d/qd&:&039@#:,8'
