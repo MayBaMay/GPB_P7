@@ -4,8 +4,7 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-# in each case google api keys should be in environnement variables
+load_dotenv() # load variables from file .env
 GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
 GOOGLE_JS_KEY = os.getenv("GOOGLE_JS_K")
 

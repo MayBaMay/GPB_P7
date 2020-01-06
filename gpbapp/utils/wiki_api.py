@@ -16,20 +16,20 @@ class WikimediaApi:
         self.response = self.find_wiki()
 
     def find_wiki(self):
-        """This method calls a method doing a request to the APi with the coordinates,
-        and if it fails, it calls a method using the parsed query
+        """This method calls find_with_coordinates method doing a request to the APi
+        with the coordinates, and if it fails, it calls a method using the parsed query
         If one of those method succeed, it calls an other methor requesting an extract
         with the page_id founded.
         It returns True (API request succeed) or False (API request failed)"""
         if self.find_with_coordinates():
             self.content = self.find_extract_with_page_id()
             return True
-        else:
-            if self.find_with_query():
-                self.content = self.find_extract_with_page_id()
-                return True
-            else:
-                return False
+
+        if self.find_with_query():
+            self.content = self.find_extract_with_page_id()
+            return True
+
+        return False
 
 
     def request_api(self, params):
@@ -37,7 +37,7 @@ class WikimediaApi:
         try:
             response = requests.get(url=self.url, params=params)
             return response.json()
-        except:
+        except requests.exceptions.RequestException:
             return 'error'
 
     def find_with_coordinates(self):
@@ -55,10 +55,9 @@ class WikimediaApi:
         if 'error' in wiki_datas:
             # returns 'error' if the request fails
             return False
-        else:
-            # change attribute self.page_id value if it succeed
-            self.page_id = wiki_datas["query"]["geosearch"][0]["pageid"]
-            return True
+        # change attribute self.page_id value if it succeed
+        self.page_id = wiki_datas["query"]["geosearch"][0]["pageid"]
+        return True
 
     def find_with_query(self):
         """This method requests a research of the query in MediaWiki API"""
@@ -72,10 +71,9 @@ class WikimediaApi:
         if 'error' in wiki_datas:
             # returns 'error' if the request fails
             return False
-        else:
-            # change attribute self.page_id value if it succeed
-            self.page_id = wiki_datas["query"]["search"][0]["pageid"]
-            return True
+        # change attribute self.page_id value if it succeed
+        self.page_id = wiki_datas["query"]["search"][0]["pageid"]
+        return True
 
     def find_extract_with_page_id(self):
         """With the page_id this method get an extract of the wikipedia page"""

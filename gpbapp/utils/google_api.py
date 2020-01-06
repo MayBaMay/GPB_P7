@@ -11,10 +11,7 @@ class GoogleApi:
         self.key = app.config['GOOGLE_GEO_KEY']
         self.query = query
         self.response = False
-        self.address = ""
-        self.latitude = 0
-        self.longitude = 0
-        self.place_id = ""
+        self.infos = {"address" : "", "lat" : 0, "lng" : 0, "place_id" : ""}
         self.query_datas = self.get_datas_from_api()
         self.get_infos_from_datas()
 
@@ -34,7 +31,7 @@ class GoogleApi:
                               "fields":"formatted_address,name,geometry,place_id"}
             search_result_requests = requests.get(search_url, params=search_payload)
             return search_result_requests.json()
-        except:
+        except requests.exceptions.RequestException:
             datas = {"status": "NO CONNECTION"}
             return datas
 
@@ -43,7 +40,7 @@ class GoogleApi:
         """this method get infos from datas"""
         if self.query_datas["status"] == "OK":
             self.response = True
-            self.address = self.query_datas["candidates"][0]["formatted_address"]
-            self.latitude = self.query_datas["candidates"][0]["geometry"]["location"]["lat"]
-            self.longitude = self.query_datas["candidates"][0]["geometry"]["location"]["lng"]
-            self.place_id = self.query_datas["candidates"][0]["place_id"]
+            self.infos["address"] = self.query_datas["candidates"][0]["formatted_address"]
+            self.infos["lat"] = self.query_datas["candidates"][0]["geometry"]["location"]["lat"]
+            self.infos["lng"] = self.query_datas["candidates"][0]["geometry"]["location"]["lng"]
+            self.infos["place_id"] = self.query_datas["candidates"][0]["place_id"]

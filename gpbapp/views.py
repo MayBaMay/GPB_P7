@@ -38,7 +38,7 @@ def process():
     google = GoogleApi(query)
     # if google find with those words, response attribute is True
     if google.response:
-        geoloc = "{} {}".format(grandpy.geo_answer, google.address)
+        geoloc = "{} {}".format(grandpy.geo_answer, google.infos["address"])
     # else those words don't respond, use words before key words
     else:
         query = parser.parsed_before_keyword
@@ -46,7 +46,7 @@ def process():
         # same proceed if google Api found it response is True
         if google.response:
             geoloc = "{} {}".format(grandpy.geo_answer,
-                                    google.address)
+                                    google.infos["address"])
         # else new attempt failed as well, granpy can't help you so give a geo_noresults_answer
         else:
             geoloc = "{}".format(grandpy.geo_noresults_answer)
@@ -56,7 +56,7 @@ def process():
     #########################################
     # if grandpy doesn't know where it is, he can't talk about it
     if google.response:
-        wiki = WikimediaApi(query, google.latitude, google.longitude)
+        wiki = WikimediaApi(query, google.infos["lat"], google.infos["lng"])
         if wiki.response:
             story = "{} {}".format(grandpy.wiki_answer, wiki.content)
         else:
@@ -70,8 +70,8 @@ def process():
     return jsonify(response=google.response,
                    geoloc=geoloc,
                    key=app.config['GOOGLE_JS_KEY'],
-                   lat=google.latitude,
-                   lng=google.longitude,
+                   lat=google.infos["lat"],
+                   lng=google.infos["lng"],
                    story=story)
 
 

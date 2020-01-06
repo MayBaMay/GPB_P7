@@ -74,10 +74,9 @@ class Parser:
             # cut query in two (before and after key word)
             return {"after_key_word" : temporary_query[(key_word_index+1):],
                     "before_key_word" : temporary_query[:(key_word_index)]}
-        else:
-            # keep all query
-            return {"after_key_word" : temporary_query,
-                    "before_key_word" : temporary_query}
+        # or keep all query
+        return {"after_key_word" : temporary_query,
+                "before_key_word" : temporary_query}
 
     @staticmethod
     def key_word_string(query):
