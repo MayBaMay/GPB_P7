@@ -5,12 +5,13 @@ import os
 from dotenv import load_dotenv
 
 #### get GOOGLE_GEO_KEYS depending if running in localhost or heroku
-try:    # try to load local variables from file .env
-    load_dotenv()
-    DEBUG = True
-except:  # if fails it's production mode and debug is False
-    DEBUG = False
+# try:    # try to load local variables from file .env
+#     load_dotenv()
+#     DEBUG = True
+# except:  # if fails it's production mode and debug is False
+#     DEBUG = False
 
+load_dotenv()
 # in each case google api keys should be in environnement variables
 GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
 GOOGLE_JS_KEY = os.getenv("GOOGLE_JS_K")
