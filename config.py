@@ -4,14 +4,16 @@
 import os
 from dotenv import load_dotenv
 
+GOOGLE_GEO_K = "AIzaSyD5Z9lKhzF6QCYeB5-tTm4AcIl4FCQBy8E"
+
 #### get GOOGLE_GEO_KEY depending if running in localhost or heroku
-try:
-    load_dotenv()
-    GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
-    DEBUG = True
-except:
-    GOOGLE_GEO_KEY = GOOGLE_GEO_K
-    DEBUG = False
+# try:
+#     load_dotenv()
+#     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
+#     DEBUG = True
+# except:
+#     GOOGLE_GEO_KEY = GOOGLE_GEO_K
+#     DEBUG = False
 
 # GOOGLE_GEO_KEY = os.popen('heroku config:get GOOGLE_GEO_K').readlines()
 # GOOGLE_GEO_KEY = GOOGLE_GEO_KEY[0][1:40]
