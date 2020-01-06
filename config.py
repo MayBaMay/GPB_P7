@@ -3,13 +3,22 @@
 
 import os
 
+#### get GOOGLE_GEO_KEY depending if running in localhost or heroku
+# try:
+#     from dotenv import load_dotenv
+#     load_dotenv()
+#     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_KEY")
+# except ImportError:
+#     GOOGLE_GEO_KEY = os.environ.get('GOOGLE_GEO_KEY')
 
-try:
+is_prod = os.environ.get('IS_HEROKU', None)
+
+if is_prod:
+    GOOGLE_GEO_KEY = os.environ.get('GOOGLE_GEO_KEY')
+else:
     from dotenv import load_dotenv
     load_dotenv()
     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_KEY")
-except ImportError:
-    GOOGLE_GEO_KEY = os.environ.get('GOOGLE_GEO_KEY')
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or '@#qsf!?d/qd&:&039@#:,8'
