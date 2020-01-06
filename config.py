@@ -5,13 +5,14 @@ import os
 from dotenv import load_dotenv
 
 #### get GOOGLE_GEO_KEY depending if running in localhost or heroku
-# try:
-#     load_dotenv()
-#     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
-# except:
-#     pass
-    # GOOGLE_GEO_KEY = os.environ.get('GOOGLE_GEO_K')
-    # print(GOOGLE_GEO_KEY)
+try:
+    load_dotenv()
+    GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
+    DEBUG = True
+except:
+    GOOGLE_GEO_KEY = GOOGLE_GEO_K
+    DEBUG = False
+
 # GOOGLE_GEO_KEY = os.popen('heroku config:get GOOGLE_GEO_K').readlines()
 # GOOGLE_GEO_KEY = GOOGLE_GEO_KEY[0][1:40]
 
@@ -31,15 +32,15 @@ from dotenv import load_dotenv
 #
 # GOOGLE_GEO_KEY = os.getenv('GOOGLE_GEO_K')
 
-if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
+# if os.environ.get('ENV') == 'PRODUCTION':
+#     DEBUG = False
+#
+# else:
+#     DEBUG = True
+#     load_dotenv()
+#     GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
 
-else:
-    DEBUG = True
-    load_dotenv()
-    GOOGLE_GEO_KEY = os.getenv("GOOGLE_GEO_K")
 
-print(DEBUG)
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or '@#qsf!?d/qd&:&039@#:,8'
 GOOGLE_JS_KEY = "AIzaSyDcpvFtRDSx4pt3Fuf8etylEYKyUfm9knM" # this key has a Website restrictions
