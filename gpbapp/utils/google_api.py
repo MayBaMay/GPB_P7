@@ -31,7 +31,7 @@ class GoogleApi:
                               "fields":"formatted_address,name,geometry,place_id"}
             search_result_requests = requests.get(search_url, params=search_payload)
             return search_result_requests.json()
-        except requests.exceptions.RequestException:
+        except:
             datas = {"status": "NO CONNECTION"}
             return datas
 

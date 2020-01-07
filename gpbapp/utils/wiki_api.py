@@ -37,7 +37,7 @@ class WikimediaApi:
         try:
             response = requests.get(url=self.url, params=params)
             return response.json()
-        except requests.exceptions.RequestException:
+        except:
             return 'error'
 
     def find_with_coordinates(self):
