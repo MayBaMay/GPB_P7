@@ -11,10 +11,10 @@ QUERY_ALL += "musée d'art et d'histoire de Fribourg, s'il te plaît?"
 QUERY_PUNCTUATION_OUT = "salut grandpy comment s est passé ta soirée avec grandma "
 QUERY_PUNCTUATION_OUT += "hier soir au fait pendant que j y pense pourrais tu m indiquer "
 QUERY_PUNCTUATION_OUT += "où se trouve le musée d art et d histoire de fribourg s il te plaît"
-QUERY_STOP_WORDS_OUT = ['salut', 'soirée', 'soir', 'indiquer', 'trouve', 'musée',
+QUERY_STOP_WORDS_OUT = ['salut', 'soirée', 'soir', 'indiquer', 'où', 'trouve', 'musée',
                         'art', 'histoire', 'fribourg']
 QUERY_AFTER_KEY_WORD = ['musée', 'art', 'histoire', 'fribourg']
-QUERY_BEFORE_KEY_WORD = ['salut', 'soirée', 'soir', 'indiquer']
+QUERY_BEFORE_KEY_WORD = ['salut', 'soirée', 'soir', 'indiquer', 'où']
 
 
 def test_take_out_punctuation():

@@ -11,7 +11,7 @@ class GoogleApi:
         self.key = app.config['GOOGLE_GEO_KEY']
         self.query = query
         self.response = False
-        self.infos = {"address" : "", "lat" : 0, "lng" : 0, "place_id" : ""}
+        self.infos = {"address" : "", "lat" : 0, "lng" : 0}
         self.query_datas = self.get_datas_from_api()
         self.get_infos_from_datas()
 
@@ -42,4 +42,3 @@ class GoogleApi:
             self.infos["address"] = self.query_datas["candidates"][0]["formatted_address"]
             self.infos["lat"] = self.query_datas["candidates"][0]["geometry"]["location"]["lat"]
             self.infos["lng"] = self.query_datas["candidates"][0]["geometry"]["location"]["lng"]
-            self.infos["place_id"] = self.query_datas["candidates"][0]["place_id"]
