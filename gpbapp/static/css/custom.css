@@ -98,7 +98,7 @@ footer img{
   padding-bottom: 1%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body{
     padding-top: 190px;
   }
