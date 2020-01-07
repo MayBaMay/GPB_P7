@@ -8,8 +8,8 @@ class GoogleApi:
     """This class gets infos from google maps API"""
 
     def __init__(self, query):
-        self.key = app.config['GOOGLE_GEO_KEY']
         self.query = query
+        self.key = app.config['GOOGLE_GEO_KEY']
         self.response = False
         self.infos = {"address" : "", "lat" : 0, "lng" : 0}
         self.query_datas = self.get_datas_from_api()
