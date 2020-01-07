@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""This module contains tests on links between server app and the server"""
+"""This module contains tests on links between the app and the server"""
 
 from flask_testing import LiveServerTestCase
 from selenium import webdriver
@@ -58,4 +58,4 @@ class AppTest(LiveServerTestCase):
         """tests if current_url is still the expected one """
         self.driver.get(self.get_server_url())
         self.submits_form()
-        assert self.driver.current_url == 'http://localhost:8943/'
+        assert self.driver.current_url == app.config['URL']
