@@ -20,7 +20,6 @@ class GoogleApi:
         """this method requests an url research to google API
         parameters provided are formatted_address,name,geometry,place_id
         then loading it with json and get needed informations from json """
-
         try:
             # https://developers.google.com/places/web-service/search
             search_url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?"
