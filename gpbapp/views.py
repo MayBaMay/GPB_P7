@@ -54,14 +54,13 @@ def process():
     #########################################
     ###### find query in mediawiki API ######
     #########################################
-    # if grandpy doesn't know where it is, he can't talk about it
     if google.response:
         wiki = WikimediaApi(query, google.infos["lat"], google.infos["lng"])
         if wiki.response:
             story = "{} {}".format(grandpy.wiki_answer, wiki.content)
         else:
             story = "{}".format(grandpy.wiki_noresults_answer)
-    else:
+    else:   # if grandpy doesn't know where it is, he can't talk about it
         story = "{}".format(grandpy.wiki_noresults_answer)
 
     #########################################

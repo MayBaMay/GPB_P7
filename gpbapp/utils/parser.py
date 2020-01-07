@@ -15,9 +15,9 @@ class Parser:
         #parse query
         self.parsed_query = self.parse_query_with_stop_words(self.parse_query_characters)
         after_key_word_list = self.parse_query_with_key_words(self.parsed_query)["after_key_word"]
-        self.parsed_after_keyword = self.key_word_string(after_key_word_list)
+        self.parsed_after_keyword = self.stringify_parsed_query(after_key_word_list)
         before_key_word_list = self.parse_query_with_key_words(self.parsed_query)["before_key_word"]
-        self.parsed_before_keyword = self.key_word_string(before_key_word_list)
+        self.parsed_before_keyword = self.stringify_parsed_query(before_key_word_list)
 
     @property
     def parse_query_characters(self):
@@ -64,27 +64,28 @@ class Parser:
         # tcheck if key words exists
         found_key_word = False
         key_word_index = -1 # if not index will be 0
+        list_index_key_words = []
         for word in temporary_query:
             for regex in key_words:
                 if re.search(regex, word):
                     found_key_word = True
                     key_word_index = temporary_query.index(word)
-
+                    list_index_key_words.append(key_word_index)
         if found_key_word:
             # cut query in two (before and after key word)
-            return {"after_key_word" : temporary_query[(key_word_index+1):],
-                    "before_key_word" : temporary_query[:(key_word_index)]}
+            return {"after_key_word" : temporary_query[(key_word_index+1):],    #last word index
+                    "before_key_word" : temporary_query[:(list_index_key_words[0])]} #first word index on the list
         # or keep all query
         return {"after_key_word" : temporary_query,
                 "before_key_word" : temporary_query}
 
     @staticmethod
-    def key_word_string(query):
+    def stringify_parsed_query(query):
         """ return a string of query key words list """
-        key_word_string = ""
+        parsed_query = ""
         for element in query:
-            if key_word_string != "":
-                key_word_string += " " + element
+            if parsed_query != "":
+                parsed_query += " " + element
             else:
-                key_word_string += element
-        return key_word_string
+                parsed_query += element
+        return parsed_query

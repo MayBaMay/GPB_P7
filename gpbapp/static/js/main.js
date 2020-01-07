@@ -105,7 +105,7 @@ function reset(){
   let section = $("section");
   let top = section.scrollTop() // Get position
   if(top!=0){
-  section.animate({scrollTop:0}, '500');
+    section.animate({scrollTop:0}, '500');
   }
   // hide loader icone
   loader.hide();

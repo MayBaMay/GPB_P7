@@ -14,7 +14,12 @@ QUERY_PUNCTUATION_OUT += "où se trouve le musée d art et d histoire de fribour
 QUERY_STOP_WORDS_OUT = ['salut', 'soirée', 'soir', 'indiquer', 'où', 'trouve', 'musée',
                         'art', 'histoire', 'fribourg']
 QUERY_AFTER_KEY_WORD = ['musée', 'art', 'histoire', 'fribourg']
-QUERY_BEFORE_KEY_WORD = ['salut', 'soirée', 'soir', 'indiquer', 'où']
+
+QUERY_PLACE_END = "la tour eiffel, c'est où que ça se trouve?"
+QUERY_END_PUNCTUATION_OUT = "la tour eiffel c est où que ça se trouve"
+QUERY_END_STOP_WORDS_OUT = ['tour', 'eiffel', 'où', 'trouve']
+QUERY_BEFORE_KEY_WORD = ['tour', 'eiffel']
+
 
 
 def test_take_out_punctuation():
@@ -37,8 +42,8 @@ def test_after_key_word():
 
 def test_before_key_word():
     """tests search keyword and return what is before"""
-    parser = Parser(QUERY_ALL)
-    before_key_word = parser.parse_query_with_key_words(QUERY_STOP_WORDS_OUT)["before_key_word"]
+    parser = Parser(QUERY_PLACE_END)
+    before_key_word = parser.parse_query_with_key_words(QUERY_END_STOP_WORDS_OUT)["before_key_word"]
     assert before_key_word == QUERY_BEFORE_KEY_WORD
 
 def test_no_key_word():
@@ -52,5 +57,5 @@ def test_no_key_word():
 def test_result_is_string():
     """tests if the result is a string"""
     parser = Parser(QUERY_ALL)
-    result = parser.key_word_string(QUERY_AFTER_KEY_WORD)
+    result = parser.stringify_parsed_query(QUERY_AFTER_KEY_WORD)
     assert isinstance(result, str)
