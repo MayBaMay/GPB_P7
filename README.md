@@ -9,7 +9,7 @@
 The project is available online on https://gpbotp7.herokuapp.com/<br/>
 __NB__: Google API might be deactivated in the future.
 
-## Programm on GitHub :
+### Programm on GitHub :
 If you clone this repository, make sure your environnement contains all requirements.<br/>
 You will find them in the file **requirement.txt**.
 
