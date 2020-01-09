@@ -1,7 +1,7 @@
 # GrandPy Bot
 
 This open source project was created for the [OpenClassRoom's Python developer course](https://openclassrooms.com/fr/paths/68-developpeur-dapplication-python) (Project 7/13)).<br/>
-It is a Flask application integrating a back-end part based on Python 3.7 and a front-end part developed with HTML5, CSS3 and JavaScript.
+It is a Flask application integrating a back-end part based on Python 3.7 and a front-end part developed with HTML5, CSS3 and JavaScript using Bootsrap.
 
 
 ## Ask GrandPy about a location and if he knows the place, he will give you:
