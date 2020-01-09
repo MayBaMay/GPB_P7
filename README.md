@@ -1,6 +1,6 @@
 # GrandPy Bot
 
-This project was created for the [OpenClassRoom's Python developer course](https://openclassrooms.com/fr/paths/68-developpeur-dapplication-python) ([Project 7/13](https://openclassrooms.com/fr/projects/158/assignment))
+This project was created for the [OpenClassRoom's Python developer course](https://openclassrooms.com/fr/paths/68-developpeur-dapplication-python) ([Project 7/13](https://openclassrooms.com/fr/projects/158/assignment)).<br/>
 It is a Flask application built with Python 3.7
 
 ## Ask GrandPy about a location and if he knows the place, he will give you:
