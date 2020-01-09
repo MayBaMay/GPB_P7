@@ -1,7 +1,8 @@
 # GrandPy Bot
 
 This project was created for the [OpenClassRoom's Python developer course](https://openclassrooms.com/fr/paths/68-developpeur-dapplication-python) (Project 7/13)).<br/>
-It is a Flask application built with Python 3.7
+It is a Flask application integrating a back-end part based on Python 3.7 and a front-end part developed with HTML5, CSS3 and JavaScript.
+
 
 ## Ask GrandPy about a location and if he knows the place, he will give you:
 * the adress and a map showing the place location.<br/>
