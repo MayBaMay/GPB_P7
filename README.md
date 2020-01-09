@@ -24,6 +24,6 @@ GOOGLE_GEO_K="YOUR_GEO_API_KEY"
 GOOGLE_JS_K="YOUR_JS_API_KEY"
 ```
 
-Then you can run the program in a development mode from your terminal `python run.py` and open you're web browser to the localhost adress http://localhost:5000/.<br/>
+Then you can run the program in a development mode from your terminal `python3 run.py` and open you're web browser to the localhost adress http://localhost:5000/.<br/>
 
 Have fun!
