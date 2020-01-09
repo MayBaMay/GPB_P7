@@ -16,8 +16,7 @@ __NB__: Google API keys might be deactivated in the future.
 ### Program on GitHub :
 Clone this repository, create your environment and install requirements.<br/>
 
-You will need two [Google map's API keys](https://cloud.google.com/maps-platform/?hl=fr&utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_321592199697-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+~+Google+Maps+API+EXA-KWID_43700039907225900-kwd-1952727095-userloc_20874&utm_term=KW_google%20map%20api-ST_google+map+api&gclid=Cj0KCQiArozwBRDOARIsAHo2s7sxYc1IeDzv4cuo3ZEUQPd08BclHplMC17n_CuQuv1b8KV9JBH8wiwaAkvtEALw_wcB).<br/>
- One for geolocation (**GOOGLE_GEO_K**) and the other used with javascript to get the map from the geolocation (**GOOGLE_JS_K**). <br/>
+You will need two [Google maps API keys](https://cloud.google.com/maps-platform/?hl=fr&utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_321592199697-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+~+Google+Maps+API+EXA-KWID_43700039907225900-kwd-1952727095-userloc_20874&utm_term=KW_google%20map%20api-ST_google+map+api&gclid=Cj0KCQiArozwBRDOARIsAHo2s7sxYc1IeDzv4cuo3ZEUQPd08BclHplMC17n_CuQuv1b8KV9JBH8wiwaAkvtEALw_wcB). One for geolocation (**GOOGLE_GEO_K**) and the other used with javascript to get the map from the geolocation (**GOOGLE_JS_K**). <br/>
  <br/>
 Create a file **.env** containing the following script :
 
